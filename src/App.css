@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
+input[type="text"], textarea{
+    width: 200px;
+    padding: 1rem;
+    border-radius: 7px;
+    border: .5px solid rgba(128, 128, 128, 0.555);
+    outline: none;
+    transition: .1s ease-in-out;
+}
+input[type="text"]:focus, textarea:focus{
+    border: 2px solid rgb(93, 222, 231);
+}
+
+textarea{
+    width: 700px;
+    padding: 10px;
+    resize: none;
+}
+
+input[type="submit"]{
+    width: 150px;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 5px;
+
+}
+
+.submit{
+    text-align: end;
+}
+
+
+.articles{
+    margin-left: 20px;
+    width: 700px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(94, 90, 90, 0.432);
+    padding: 10px 10px 35px;
+}
+
+.AuthorDate{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    float: right;
+}
+
+button:nth-child(1){
+    margin-right: 10px;
+}
+
+.text{
+    width: 100%;
+}
