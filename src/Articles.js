@@ -16,6 +16,10 @@ export default function Articles({article, deleteArticle}) {
         return newDate;
     }
 
+    const handleClickValid = () =>{
+        setIsEditing(false);
+    }
+
     return (
         <div>
             <div className="articles">
@@ -23,11 +27,14 @@ export default function Articles({article, deleteArticle}) {
                     <div style={{fontWeight:"bold"}}>{article.author}</div>
                     <div>poste du {getDate(article.date)}</div>
                 </div>
-                {isEditing  ? (<textarea autoFocus defaultValue={article.message}></textarea>) 
+                {isEditing  ? (<textarea autoFocus defaultValue={article.message} className="textarea"></textarea>) 
                     : (<p className="text">{article.message}</p>)
                 }
+                
                 <div className="button">
-                    <button onClick={() => setIsEditing(true)}>Edit</button>
+                    {isEditing ? <button onClick={handleClickValid}>Valider</button> :
+                        <button onClick={() => setIsEditing(true)}>Edit</button>
+                    }
                     <button onClick={() => deleteArticle(article.id)}>Delete</button>
                 </div>
             </div>
