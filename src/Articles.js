@@ -22,7 +22,7 @@ export default function Articles({article, deleteArticle}) {
 
     return (
         <div>
-            <div className="articles">
+            <div className="articles" style={{background: isEditing ? "rgba(127, 255, 212, 0.233)" : "white"}}>
                 <div className="AuthorDate">
                     <div style={{fontWeight:"bold"}}>{article.author}</div>
                     <div>poste du {getDate(article.date)}</div>
@@ -34,7 +34,14 @@ export default function Articles({article, deleteArticle}) {
                     {isEditing ? <button onClick={() => handleClickValid(article.id)}>Valider</button> :
                         <button onClick={() => setIsEditing(true)}>Edit</button>
                     }
-                    <button onClick={() => deleteArticle(article.id)}>Delete</button>
+                    <button 
+                        onClick={() => {
+                            if(window.confirm("Voulez-vous supprmer cet article ?")){
+                                deleteArticle(article.id)
+                            }
+                        }}>
+                        Delete
+                    </button>
                 </div>
             </div>
         </div>
