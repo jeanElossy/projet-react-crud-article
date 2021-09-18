@@ -18,7 +18,7 @@ input[type="text"], textarea{
     transition: .1s ease-in-out;
 }
 input[type="text"]:focus, textarea:focus{
-    border: 2px solid rgb(93, 222, 231);
+    border: .5px solid rgb(93, 222, 231);
 }
 
 textarea{
@@ -71,6 +71,7 @@ button:nth-child(1){
     width: 97%;
     border: .3px solid rgba(128, 128, 128, 0.555);
     margin: 8px 0;
+    height: 100px;
 }
 
 .textarea:focus{

@@ -3,7 +3,7 @@ import Articles from "./Articles";
 import Form from './Form';
 
 export default function New() {
-
+    
     const [data, setData] = useState([]);
     const handleContent = (article) =>{
         const newData = [...data];
@@ -20,14 +20,14 @@ export default function New() {
         // console.log(index)
         setData(newDelete);
     }
-
+    console.log(data)
     return (
         <div>
-            <Form 
-                addMessage={handleContent}
-            />
+            <Form addMessage={handleContent}/>
 
-            {data.map((article) => (
+            {data
+                .sort((a,b) => b.id - a.id)
+                .map((article) => (
                 <Articles key={article.id} article={article} deleteArticle={handleDelete}/>
             ))}
         </div>

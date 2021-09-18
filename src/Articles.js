@@ -30,9 +30,8 @@ export default function Articles({article, deleteArticle}) {
                 {isEditing  ? (<textarea autoFocus defaultValue={article.message} className="textarea"></textarea>) 
                     : (<p className="text">{article.message}</p>)
                 }
-                
                 <div className="button">
-                    {isEditing ? <button onClick={handleClickValid}>Valider</button> :
+                    {isEditing ? <button onClick={() => handleClickValid(article.id)}>Valider</button> :
                         <button onClick={() => setIsEditing(true)}>Edit</button>
                     }
                     <button onClick={() => deleteArticle(article.id)}>Delete</button>
