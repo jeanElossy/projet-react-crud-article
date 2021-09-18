@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Articles({article, deleteArticle}) {
+const Articles = ({article, deleteArticle}) => {
 
     const [isEditing, setIsEditing] = useState(false);
 
@@ -47,3 +47,4 @@ export default function Articles({article, deleteArticle}) {
         </div>
     )
 }
+export default Articles;

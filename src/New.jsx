@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Articles from "./Articles";
 import Form from './Form';
 
-export default function New() {
-    
+const New = () =>{
+
     const [data, setData] = useState([]);
     const handleContent = (article) =>{
         const newData = [...data];
@@ -33,3 +33,5 @@ export default function New() {
         </div>
     )
 }
+
+export default New;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Form({addMessage}) {
+const Form = ({addMessage}) => {
 
     const [author, setAuthor] = useState("");
     const [message, setMessage] = useState("");
@@ -24,8 +24,6 @@ export default function Form({addMessage}) {
                 setError(false);
             }
         }
-    
-
 
     return (
         <div className="form">
@@ -56,3 +54,4 @@ export default function Form({addMessage}) {
         </div>
     )
 } 
+export default Form;
